@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/captaintian888/infinite-canvas:v0.8.1-captain.1
+    image: ghcr.io/captaintian888/infinite-canvas:v0.8.1-captain.2
     build:
       context: .
       dockerfile: Dockerfile
