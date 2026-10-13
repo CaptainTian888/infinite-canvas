@@ -7,7 +7,7 @@ import "./globals.css";
 import React from "react";
 
 export const metadata: Metadata = {
-    title: "无限画布",
+    title: "Captain Canvas",
     description: "一个无限画布创作工具",
 };
 
