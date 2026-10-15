@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="web/public/logo.png" width="96" alt="Captain Canvas logo">
+  <img src="web/public/logo.png" width="96" alt="九社NinthClub logo">
 </p>
 
-<h1 align="center">Captain Canvas</h1>
+<h1 align="center">九社NinthClub</h1>
 
 <p align="center">
   <a href="https://github.com/tigerowo/infinite-canvas"><img src="https://img.shields.io/github/stars/tigerowo/infinite-canvas?style=flat-square&logo=github" alt="GitHub stars"></a>
