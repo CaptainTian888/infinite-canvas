@@ -4,7 +4,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { navigationTools, type NavigationToolSlug } from "@/constant/navigation-tools";
+import { navigationExternalLinks, navigationTools, type NavigationToolSlug } from "@/constant/navigation-tools";
 import { AppConfigModal } from "@/components/layout/app-config-modal";
 import { MobileNavDrawer } from "@/components/layout/mobile-nav-drawer";
 import { UserStatusActions } from "@/components/layout/user-status-actions";
@@ -57,6 +57,21 @@ export function AppTopNav() {
                                             <Icon className="size-4" />
                                             <span className="truncate">{tool.label}</span>
                                         </Link>
+                                    );
+                                })}
+                                {navigationExternalLinks.map((link) => {
+                                    const Icon = link.icon;
+                                    return (
+                                        <a
+                                            key={link.key}
+                                            href={link.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="relative flex h-16 shrink-0 items-center gap-2 text-sm leading-6 text-stone-500 transition hover:text-stone-950 dark:text-stone-400 dark:hover:text-stone-100"
+                                        >
+                                            <Icon className="size-4" />
+                                            <span className="truncate">{link.label}</span>
+                                        </a>
                                     );
                                 })}
                             </nav>

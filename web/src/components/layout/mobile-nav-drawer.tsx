@@ -3,7 +3,7 @@
 import { Drawer } from "antd";
 import Link from "next/link";
 
-import { navigationTools, type NavigationToolSlug } from "@/constant/navigation-tools";
+import { navigationExternalLinks, navigationTools, type NavigationToolSlug } from "@/constant/navigation-tools";
 import { cn } from "@/lib/utils";
 
 type MobileNavDrawerProps = {
@@ -32,6 +32,22 @@ export function MobileNavDrawer({ open, activeToolSlug, onClose }: MobileNavDraw
                             <Icon className="size-5" />
                             <span>{tool.label}</span>
                         </Link>
+                    );
+                })}
+                {navigationExternalLinks.map((link) => {
+                    const Icon = link.icon;
+                    return (
+                        <a
+                            key={link.key}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={onClose}
+                            className="flex items-center gap-3 rounded-lg px-3 py-3 text-base text-stone-600 transition hover:bg-stone-100 hover:text-stone-950 dark:text-stone-300 dark:hover:bg-stone-800 dark:hover:text-stone-100"
+                        >
+                            <Icon className="size-5" />
+                            <span>{link.label}</span>
+                        </a>
                     );
                 })}
             </div>

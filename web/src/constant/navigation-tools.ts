@@ -1,4 +1,4 @@
-import { FileText, ImagePlus, Images, Maximize2, Music2, Video } from "lucide-react";
+import { FileText, ImagePlus, Images, Maximize2, Video, Zap } from "lucide-react";
 
 export const navigationTools = [
     {
@@ -17,11 +17,6 @@ export const navigationTools = [
         icon: Video,
     },
     {
-        slug: "music",
-        label: "音乐创作台",
-        icon: Music2,
-    },
-    {
         slug: "prompts",
         label: "提示词库",
         icon: FileText,
@@ -30,6 +25,15 @@ export const navigationTools = [
         slug: "assets",
         label: "我的素材",
         icon: Images,
+    },
+] as const;
+
+export const navigationExternalLinks = [
+    {
+        key: "zerohub-api",
+        label: "ZeroHub API",
+        href: "https://api.zerohub.ai/",
+        icon: Zap,
     },
 ] as const;
 
